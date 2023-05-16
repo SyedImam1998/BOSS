@@ -192,7 +192,7 @@ export default function App() {
     setProvider(provider);
     const  signer = await provider.getSigner();
     setAccount(signer);
-    const contractInstance = new ethers.Contract(contractAddress,contractAbi, signer);
+    const contractInstance = new Contract(contractAddress,contractAbi, signer);
     setContract(contractInstance);
     
 
@@ -208,7 +208,8 @@ export default function App() {
   
 
   const handleNetworkChange = () => {
-    window.location.reload();
+    // window.location.reload();
+    connectWallet();
   };
 
 
@@ -218,7 +219,7 @@ export default function App() {
 
 
       window.ethereum.on("accountsChanged", handleNetworkChange);
-      window.ethereum.on("chainChanged", handleNetworkChange);
+      // window.ethereum.on("chainChanged", handleNetworkChange);
 
 
       changeNetwork().then(()=>{
