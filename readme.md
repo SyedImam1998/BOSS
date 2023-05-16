@@ -1,0 +1,10 @@
+### Hardhat Commands:
+
+- npm init -y   //// initilization....
+- npx hardhat node /// run this command in the terminal keep it open
+- npx hardhat run --network localhost scripts/deploy.js (or) npx hardhat run scripts/deploy.js --network localhost  //// to deploy the contract on above started node.
+
+#### Verify Check Mark in EtherScan:
+- Install npm i @nomiclabs/hardhat-etherscan
+- run cmd, ETH_SEPOLI is hardhat.config file setup and contract address that is deloyed first on network later we can verify  : npx hardhat verify --network ETH_SEPOLI 0x8794D7BB1F18C324382Db3139E3b260130d3c3ed
+
